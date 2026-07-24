@@ -21,7 +21,7 @@ if 'RDS_DB_NAME' in os.environ:
     )
 else:
     # our database uri
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:Cellfone01@localhost:5432/flaskdemodb"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/flaskdemodb"
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
