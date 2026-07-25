@@ -2,7 +2,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask import Flask,render_template,request, redirect
 from models import db, InfoModel
-
 from flask import Flask
 import os
  
@@ -21,8 +20,7 @@ if 'RDS_DB_NAME' in os.environ:
     )
 else:
     # our database uri
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/flaskdemodb"
-
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:something@localhost:5432/flaskdemodb"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
  
